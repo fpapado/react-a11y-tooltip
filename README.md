@@ -33,10 +33,10 @@ Then import according to your modules model and bundler, such as [Rollup](https:
 
 ```js
 // ES Modules
-import { Tooltip } from 'react-a11y-tooltip";
+import { Tooltip } from "react-a11y-tooltip";
 
 /// CommonJS modules
-const { Tooltip } = require('react-a11y-tooltip');
+const { Tooltip } = require("react-a11y-tooltip");
 ```
 
 A [UMD](https://github.com/umdjs/umd) version is also available on [unpkg](https://unpkg.com/):
