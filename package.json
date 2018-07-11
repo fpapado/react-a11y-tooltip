@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/fpapado/react-a11y-tooltip#readme",
   "scripts": {
+    "dev": "tsc --watch --pretty",
     "build": "microbundle build",
     "test": "jest",
     "prepare": "npm t",
@@ -36,8 +37,14 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": ["eslint", "git add"],
-    "*.{js,ts,tsx,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,ts,tsx}": [
+      "eslint",
+      "git add"
+    ],
+    "*.{js,ts,tsx,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "eslint": "^5.1.0",
@@ -51,5 +58,8 @@
   "peerDependencies": {
     "react": "^15 || ^16",
     "react-dom": "^15 || ^16"
+  },
+  "dependencies": {
+    "@types/react": "^16.4.6"
   }
 }
