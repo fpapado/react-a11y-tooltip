@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
+import { FauxButton } from "react-faux-button";
 
-export type TooltipPurpose =
-  | "primary"
-  | "descriptive"
+export type TooltipPurpose = "primary" | "descriptive";
 
 export interface ITooltip {
   /** Whether the Tooltip labels or elaborates on the element */
@@ -31,13 +30,15 @@ export const Tooltip: React.SFC<ITooltip> = ({
   <RandomId>
     {id => (
       <span className="r-tooltip-container">
-        <button
+        {/* Using FauxButton to avoid having to pass on resets from consumers */}
+        <FauxButton
+          tag="div"
           className="r-tooltip-button"
-          aria-labelledby={purpose === 'primary' ? id : undefined}
-          aria-describedby={purpose === 'descriptive' ? id : undefined}
+          aria-labelledby={purpose === "primary" ? id : undefined}
+          aria-describedby={purpose === "descriptive" ? id : undefined}
         >
           {renderContent}
-        </button>
+        </FauxButton>
         <div className="r-tooltip-tooltip" role="tooltip" id={id}>
           {renderTooltip}
         </div>
@@ -49,6 +50,7 @@ export const Tooltip: React.SFC<ITooltip> = ({
 // Utils
 /** Render-prop component that passes a random id */
 interface IRandomId {
+  prefix?: string;
   children: (id: string) => React.ReactNode;
 }
 
@@ -60,14 +62,14 @@ class RandomId extends React.Component<IRandomId> {
 
     // Allocate a random id on init
     this.labelId =
-      'tooltip-' +
+      this.props.prefix +
       Math.random()
         .toString(36)
         .substr(2, 9);
   }
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
     return children(this.labelId);
   }
 }
