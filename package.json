@@ -37,18 +37,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint",
-      "git add"
-    ],
     "*.{js,ts,tsx,json,css,md}": [
       "prettier --write",
       "git add"
     ]
   },
   "devDependencies": {
-    "eslint": "^5.1.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "microbundle": "^0.5.1",

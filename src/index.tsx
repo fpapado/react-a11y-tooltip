@@ -1,7 +1,8 @@
-import React from "react";
-import { FauxButton } from "react-faux-button";
+import React from 'react';
+import {FauxButton} from 'react-faux-button';
+import './styles.css';
 
-export type TooltipPurpose = "primary" | "descriptive";
+export type TooltipPurpose = 'primary' | 'descriptive';
 
 export interface ITooltip {
   /** Whether the Tooltip labels or elaborates on the element */
@@ -34,8 +35,8 @@ export const Tooltip: React.SFC<ITooltip> = ({
         <FauxButton
           tag="div"
           className="r-tooltip-button"
-          aria-labelledby={purpose === "primary" ? id : undefined}
-          aria-describedby={purpose === "descriptive" ? id : undefined}
+          aria-labelledby={purpose === 'primary' ? id : undefined}
+          aria-describedby={purpose === 'descriptive' ? id : undefined}
         >
           {renderContent}
         </FauxButton>
@@ -69,7 +70,7 @@ class RandomId extends React.Component<IRandomId> {
   }
 
   render() {
-    const { children } = this.props;
+    const {children} = this.props;
     return children(this.labelId);
   }
 }

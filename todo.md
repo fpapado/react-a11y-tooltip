@@ -1,3 +1,4 @@
 - [ ] Add styles in docs
+- [ ] Tune npm files
 - [ ] Link Demo
 - [ ] Add props in docs
