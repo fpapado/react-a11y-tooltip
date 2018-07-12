@@ -1,5 +1,6 @@
 /* Contain the positioning of the tooltip */
 .r-tooltip-container {
+  display: inline-block;
   position: relative;
 }
 

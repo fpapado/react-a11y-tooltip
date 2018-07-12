@@ -56,21 +56,25 @@ If you want to just dive in, do this:
 ```jsx
 import { Tooltip } from "react-a11y-tooltip";
 
-const App = () => {
-  <p>
-    The team had a great{" "}
-    <Tooltip
-      purpose="descriptive"
-      renderContent="GP"
-      renderTooltip="Games Played"
-    />
-    /
-    <Tooltip
-      purpose="descriptive"
-      renderContent="GW"
-      renderTooltip="Games Won"
-    />{" "}
-    ratio this season.
-  </p>
+// NOTE: Styles are important for this to work.
+// You can also copy or overwrite them.
+import "react-a11y-tooltip/dist/react-a11y-tooltip.css";
+
+function App() {
+  return (
+    <div className="App">
+      <p>
+        The team had a great{" "}
+        <Tooltip purpose="descriptive" renderTooltip="Games Played">
+          GP
+        </Tooltip>/
+        <Tooltip purpose="descriptive" renderTooltip="Games Won">
+          GW
+        </Tooltip>{" "}
+        ratio this season.
+      </p>
+    </div>
+  );
 }
+
 ```

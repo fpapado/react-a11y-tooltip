@@ -34,7 +34,7 @@ export const Tooltip: React.SFC<ITooltip> = ({
       <span className="r-tooltip-container">
         {/* Using FauxButton to avoid having to pass on resets from consumers */}
         <FauxButton
-          tag="div"
+          tag="span"
           className="r-tooltip-button"
           aria-labelledby={purpose === 'primary' ? id : undefined}
           aria-describedby={purpose === 'descriptive' ? id : undefined}
