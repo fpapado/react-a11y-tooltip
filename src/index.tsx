@@ -26,7 +26,8 @@ export interface ITooltip {
 export const Tooltip: React.SFC<ITooltip> = ({
   purpose,
   renderContent,
-  renderTooltip
+  renderTooltip,
+  children,
 }) => (
   <RandomId>
     {id => (
@@ -38,7 +39,7 @@ export const Tooltip: React.SFC<ITooltip> = ({
           aria-labelledby={purpose === 'primary' ? id : undefined}
           aria-describedby={purpose === 'descriptive' ? id : undefined}
         >
-          {renderContent}
+          {children}
         </FauxButton>
         <div className="r-tooltip-tooltip" role="tooltip" id={id}>
           {renderTooltip}
