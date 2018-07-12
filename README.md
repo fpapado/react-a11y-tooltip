@@ -56,17 +56,21 @@ If you want to just dive in, do this:
 ```jsx
 import { Tooltip } from "react-a11y-tooltip";
 
-<p>The team had a great
+const App = () => {
+  <p>
+    The team had a great{" "}
     <Tooltip
-        purpose="descriptive"
-        renderContent="GP"
-        renderTooltip="Games Played"
-    />;
+      purpose="descriptive"
+      renderContent="GP"
+      renderTooltip="Games Played"
+    />
+    /
     <Tooltip
-        purpose="descriptive"
-        renderContent="GW"
-        renderTooltip="Games Won"
-    />;
-    this season.
-</p>
+      purpose="descriptive"
+      renderContent="GW"
+      renderTooltip="Games Won"
+    />{" "}
+    ratio this season.
+  </p>
+}
 ```
