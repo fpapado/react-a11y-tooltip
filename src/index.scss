@@ -1,0 +1,26 @@
+/* Contain the positioning of the tooltip */
+.r-tooltip-container {
+  position: relative;
+}
+
+/* Hide tooltip by default */
+.r-tooltip-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding: 1em;
+  transform: translateY(0.25em);
+  background: #000;
+  color: #fff;
+}
+
+.r-tooltip-button {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+/* Display if button is hovered/focused */
+.r-tooltip-button:hover + .r-tooltip-tooltip,
+.r-tooltip-button:focus + .r-tooltip-tooltip {
+  display: block;
+}
