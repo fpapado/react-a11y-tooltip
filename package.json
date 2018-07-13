@@ -37,17 +37,24 @@
     }
   },
   "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint",
+      "git add"
+    ],
     "*.{js,ts,tsx,json,css,md}": [
       "prettier --write",
       "git add"
     ]
   },
   "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "microbundle": "^0.5.1",
     "prettier": "^1.13.7",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "typescript-eslint-parser": "^16.0.1"
   },
   "peerDependencies": {
     "react": "^15 || ^16",

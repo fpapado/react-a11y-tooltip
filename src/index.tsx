@@ -52,6 +52,7 @@ export const Tooltip: React.SFC<ITooltip> = ({
 // Utils
 /** Render-prop component that passes a random id */
 interface IRandomId {
+  /** Custom prefix for the id */
   prefix?: string;
   children: (id: string) => React.ReactNode;
 }
